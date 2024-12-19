@@ -3,7 +3,7 @@ services:
     image: mysql/mysql-server:latest
     restart: always
     environment:
-      MYSQL_DATABASE: 'dtb'
+      MYSQL_DATABASE: 'db'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'password'
       MYSQL_ROOT_PASSWORD: 'password'
@@ -12,6 +12,6 @@ services:
     expose:
       - '3306'
     volumes:
-      - my-dtb:/var/lib/mysql
+      - my-db:/var/lib/mysql
 volumes:
-  my-dtb:
+  my-db:
